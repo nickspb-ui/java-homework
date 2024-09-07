@@ -14,7 +14,7 @@ class StopButton implements ButtonInterface {
     }
 }
 
-class MainTaskInteface {
+class MainTaskInterface {
     public static void main(String[] args) {
         var playButton = new PlayButton();
         var stopButton = new StopButton();
