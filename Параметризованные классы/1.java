@@ -1,4 +1,4 @@
-class GenericsExample<T> {
+class GenericsExampleClass<T> {
     public T field;
 
     public void setField(T fieldVal) {
@@ -10,13 +10,13 @@ class GenericsExample<T> {
     }
 }
 
-class Main {
+class GenericsExample {
     public static void main(String[] args) {
-        GenericsExample<Integer> exampleInteger = new GenericsExample<Integer>();
+        GenericsExampleClass<Integer> exampleInteger = new GenericsExampleClass<Integer>();
         exampleInteger.setField(1);
 
-        System.out.println(exampleInteger instanceof GenericsExample<Integer>); // true
-        System.out.println(exampleInteger instanceof GenericsExample); // true
+        System.out.println(exampleInteger instanceof GenericsExampleClass<Integer>); // true
+        System.out.println(exampleInteger instanceof GenericsExampleClass); // true
         System.out.println(exampleInteger.getField() instanceof Integer); // true
     }
 }
