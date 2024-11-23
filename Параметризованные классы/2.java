@@ -9,18 +9,21 @@ class AnotherGenericsExampleClass<T> {
         return this.field;
     }
 
-    public static void greetExtending(AnotherGenericsExampleClass<? extends Number> smthToGreet) {
-        System.out.println("Hello, something extending Number");
+    public void greetExtending(AnotherGenericsExampleClass<? extends T> smthToGreet) {
+        System.out.println("Hello, something that is extending Number");
     }
 
-    public static void greetSuper(AnotherGenericsExampleClass<? super Number> smthToGreet) {
+    public void greetSuper(AnotherGenericsExampleClass<? super T> smthToGreet) {
         System.out.println("Hello, something that is super for Number");
     }
 }
 
 class AnotherGenericsExample {
     public static void main(String[] args) {
-        AnotherGenericsExampleClass.greetExtending(new AnotherGenericsExampleClass<Integer>());
-        AnotherGenericsExampleClass.greetSuper(new AnotherGenericsExampleClass<Number>());
+        AnotherGenericsExampleClass<Integer> exampleInteger = new AnotherGenericsExampleClass<Integer>();
+        AnotherGenericsExampleClass<Number> exampleNumber = new AnotherGenericsExampleClass<Number>();
+
+        exampleNumber.greetExtending(exampleInteger);
+        exampleInteger.greetSuper(exampleNumber);
     }
 }
