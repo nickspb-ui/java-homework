@@ -10,11 +10,11 @@ class AnotherGenericsExampleClass<T> {
     }
 
     public void greetExtending(AnotherGenericsExampleClass<? extends T> smthToGreet) {
-        System.out.println("Hello, something that is extending Number");
+        System.out.println("Hello, something that is extending this object's class");
     }
 
     public void greetSuper(AnotherGenericsExampleClass<? super T> smthToGreet) {
-        System.out.println("Hello, something that is super for Number");
+        System.out.println("Hello, something that is super for this object's class");
     }
 }
 
